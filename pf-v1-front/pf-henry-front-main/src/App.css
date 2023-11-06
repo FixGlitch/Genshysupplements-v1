@@ -1,0 +1,46 @@
+#root {
+  max-width: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+
+.fall-and-bounce {
+  animation: fallAndBounce 0.5s ease;
+}
+
+@keyframes fallAndBounce {
+  0% {
+    transform: translateY(-100%);
+  }
+  30% {
+    transform: translateY(10%);
+  }
+  60% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.transition-from-left {
+  transition: transform 1s ease;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.animate-fall {
+  animation: fall 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
